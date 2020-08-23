@@ -69,7 +69,7 @@ esp_err_t i2s_parallel_driver_install(i2s_port_t port, i2s_parallel_config_t* co
   if(conf->sample_rate > I2S_PARALLEL_CLOCK_HZ || conf->sample_rate < 1) {
     return ESP_ERR_INVALID_ARG;
   }
-  uint32_t clk_div_main = I2S_PARALLEL_CLOCK_HZ / conf->sample_rate / i2s_parallel_get_memory_width(port, conf->sample_width);
+  uint32_t clk_div_main = I2S_PARALLEL_CLOCK_HZ / conf->sample_rate;
   if(clk_div_main < 2 || clk_div_main > 0xFF) {
     return ESP_ERR_INVALID_ARG;
   }
