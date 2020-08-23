@@ -6,7 +6,7 @@
 #include <freertos/FreeRTOS.h>
 #include <driver/i2s.h>
 #include <esp_err.h>
-#include <rom/lldesc.h>
+#include <esp32/rom/lldesc.h>
 
 #define I2S_PARALLEL_CLOCK_HZ 80000000L
 

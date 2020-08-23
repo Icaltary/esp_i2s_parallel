@@ -5,7 +5,7 @@
 
 #include <driver/gpio.h>
 #include <driver/periph_ctrl.h>
-#include <rom/gpio.h>
+#include <esp32/rom/gpio.h>
 #include <soc/gpio_sig_map.h>
 
 #include <i2s_parallel.h>
