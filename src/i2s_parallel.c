@@ -206,7 +206,7 @@ esp_err_t i2s_parallel_send_dma(i2s_port_t port, lldesc_t* dma_descriptor) {
   // Configure DMA burst mode
   dev->lc_conf.val = I2S_OUT_DATA_BURST_EN | I2S_OUTDSCR_BURST_EN;
   // Set address of DMA descriptor
-  dev->out_link.addr = dma_descriptor;
+  dev->out_link.addr = (uintptr_t)dma_descriptor;
   // Start DMA operation
   dev->out_link.start = 1;
   dev->conf.tx_start = 1;
